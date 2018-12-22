@@ -291,6 +291,15 @@ Kirki::add_field( 'simple-business-wp-config', array(
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
+	'type'        => 'text',
+	'settings'    => 'simple_business_title_featured',
+	'label'       => __( 'Title', 'simple-business-wp' ),
+	'section'     => 'fp-featured',
+	'default'     => 'Titre',
+	'priority'    => 5,
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
 	'type'        => 'select',
 	'settings'    => 'simple_business_wp_left_featured',
 	'label'       => __( 'Left Featured Page Column - Choose a Page (from latest 50)', 'simple-business-wp' ),
