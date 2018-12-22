@@ -5,7 +5,7 @@ if(!function_exists('add_action')){
 	exit;
 }
 
-define('LOGINIZER_VERSION', '1.4.0');
+define('LOGINIZER_VERSION', '1.4.1');
 define('LOGINIZER_DIR', WP_PLUGIN_DIR.'/'.basename(dirname(LOGINIZER_FILE)));
 define('LOGINIZER_URL', plugins_url('', LOGINIZER_FILE));
 define('LOGINIZER_PRO_URL', 'https://loginizer.com/features#compare');
@@ -890,11 +890,16 @@ function loginizer_page_dashboard(){
 			return loginizer_page_dashboard_T();
 		}
 		
-		$resp = wp_remote_get(LOGINIZER_API.'license.php?license='.$license);
+		$resp = wp_remote_get(LOGINIZER_API.'license.php?license='.$license, array('timeout' => 30));
 		
 		if(is_array($resp)){
 			$json = json_decode($resp['body'], true);
 			//print_r($json);
+		}else{
+		
+			$lz_error['resp_invalid'] = __('The response was malformed<br>'.var_export($resp, true), 'loginizer');
+			return loginizer_page_dashboard_T();
+			
 		}
 		
 		// Save the License
