@@ -16,11 +16,21 @@ if (simple_business_wp_get_option('action-toggle') == "1") {
     <section id="<?php if (simple_business_wp_get_option('fp-action-slug')=='') {echo "action";} else {echo esc_attr(simple_business_wp_get_option('fp-action-slug'));} ?>" class="frontpage-action">
         <div class="row content_squeeze action_row">
             <div class="col-xs-12">
-            <h2 class="text-center" style="padding-bottom:25px;">This is the action text area. You can edit it from the customizer.</h2>
+            <div class="text-center action-block" style="padding-bottom:25px;">
+                <p class="action-paragraph">
+                    Grâce à la pratique régulière d’exercices corporels et respiratoires, la sophrologie va vous aider à écouter votre corps et vos émotions.
+                </p>
+                <p class="action-paragraph">
+                    Au-delà de cet apprentissage, elle vous permet de développer une attitude positive face à la vie, de prendre conscience de vos ressources, de votre potentiel et de porter un nouveau regard, plus bienveillant, sur votre environnement et sur vous-même.
+                </p>
+                <p class="action-paragraph">
+                    La sophrologie est une méthode de développement personnel; pour en mesurer les bienfaits, l’accompagnement peut nécessiter entre 5 et 10 séances.
+                </p>
+            </div>
             <p class="text-center"><a href="#" type="button" class="btn btn-primary text-center">Your Button</a></p>
             </div>
         </div>
     </section>
 <?php
-}    
+}
 ?>
