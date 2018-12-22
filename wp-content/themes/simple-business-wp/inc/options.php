@@ -1,5 +1,5 @@
 <?php
-  
+
 // #################################################
 // Reg. js / css
 // #################################################
@@ -38,7 +38,7 @@ Kirki::add_config( 'simple-business-wp-config', array(
 Kirki::add_section( 'setup', array(
     'title'          => __( 'Theme Userguide', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 1,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -59,7 +59,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 Kirki::add_section( 'general', array(
     'title'          => __( 'General Theme Settings', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 1,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -82,23 +82,23 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'priority'    => 5,
 	'default'  => get_bloginfo( 'name' )
 ) );
-          
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'home-slug',
 	'label'    => __( 'Top of Homepage Navigation Menu ID', 'simple-business-wp' ),
 	'section'  => 'general',
 	'type'     => 'text',
 	'priority'    => 5,
-	'default'  => 'home', 
+	'default'  => 'home',
 	'description'=>'The frontpage section IDs (what shows up in the hover state and the address bar when clicked) have already been set to a default shown in this field. If you would like to change the ID so that a different term comes up in the slug for that section (ie. http://mysite.com/#top instead of /#home), then change the term below for the corresponding section. You will also want to add the custom menu items in the Menus section of your dashboard (click "Links," then add the entire URL, such as http://mysite.com/#top). IMPORTANT: You must also add this term to the title field in the menu editor. If you do not see this field you may have to activate it by selecting the Screen Options tab in the top right of the page and then checking the Title Attribute box.'
-) );          
-            
-// Social Media 
+) );
+
+// Social Media
 
 Kirki::add_section( 'fp-social', array(
     'title'          => __( 'Header Social Media Section', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 5,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -147,8 +147,8 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'default'  => '',
 	'sanitize_callback' => 'simple_business_wp_sanitize_url'
 ) );
-        
-       
+
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'simple_business_wp_mail_url',
 	'label'    => __( 'Email Address', 'simple-business-wp' ),
@@ -157,8 +157,8 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'priority'    => 5,
 	'default'  => '',
 	'sanitize_callback' => 'simple_business_wp_sanitize_email'
-) );    
-            
+) );
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'type'        => 'checkbox',
 	'settings'    => 'simple_business_wp_hide_rss_icon',
@@ -167,9 +167,9 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'default'     => '0', // 1 = on | 0 = off
 	'priority'    => 5,
 ) );
-            
-// Banner Stuff Here           
-            
+
+// Banner Stuff Here
+
 Kirki::add_panel( 'banner_settings', array(
     'priority'    => 5,
     'title'       => __( 'Banner Area Settings', 'simple-business-wp' ),
@@ -225,7 +225,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 Kirki::add_section( 'fp-action1', array(
     'title'          => __( 'Frontpage Action Area', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 5,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -250,11 +250,11 @@ Kirki::add_field( 'action_text_content', array(
 	'settings' => 'fp-test-description',
 	'label'    => __( 'Action Text Section Content', 'simple-business-wp' ),
 	'section'     => 'fp-action1',
-	'default'  => '',
+	'default'  => 'Default',
 	'priority'    => 5,
 ) );
-     
-            
+
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-action-slug',
 	'label'    => __( 'Navigation Menu ID', 'simple-business-wp' ),
@@ -264,13 +264,13 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'default'  => 'action1',
 	'description'   => __( 'The frontpage section IDs (what shows up in the hover state and the address bar when clicked) have already been set to a default show in this field. If you would like to change the ID so that a different term comes up in the slug for that section (ie. http://example.com/#top instead of /#home), then change the term below for the corresponding section. You will also want to add the custom menu items in the Menus section of your dashboard (click "Links," then add the entire URL, such as http://example.com/#top). IMPORTANT: You must also add this term to the title field in the menu editor. If you do not see this field you may have to activate it by selecting the Screen Options tab in the top right of the page and then checking the Title Attribute box.', 'simple-business-wp' ),
 ) );
-    
+
 // Frontpage Featured
 
 Kirki::add_section( 'fp-featured', array(
     'title'          => __( 'Frontpage Featured Section', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 5,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -310,7 +310,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'default'  => 'fa-bomb',
 	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
 ) );
-            
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'type'        => 'select',
 	'settings'    => 'simple_business_wp_center_featured',
@@ -320,7 +320,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'priority'    => 5,
 	'multiple'    => 1,
 	'choices'     => Kirki_Helper::get_posts( array( 'posts_per_page' => 50, 'post_type' => 'page' ) ),
-) );         
+) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'simple_business_wp_center_featured_icon',
@@ -331,7 +331,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'default'  => 'fa-bomb',
 	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
 ) );
-            
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'type'        => 'select',
 	'settings'    => 'simple_business_wp_right_featured',
@@ -341,7 +341,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'priority'    => 5,
 	'multiple'    => 1,
 	'choices'     => Kirki_Helper::get_posts( array( 'posts_per_page' => 50, 'post_type' => 'page' ) ),
-) );         
+) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'simple_business_wp_right_featured_icon',
@@ -351,7 +351,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'priority'    => 5,
 	'default'  => 'fa-bolt',
 	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
-) );    
+) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-featured-slug',
@@ -364,12 +364,12 @@ Kirki::add_field( 'simple-business-wp-config', array(
 ) );
 
 
-// About 
+// About
 
 Kirki::add_section( 'fp-about', array(
     'title'          => __( 'Frontpage About Section', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 5,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -444,7 +444,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 Kirki::add_section( 'fp-action2', array(
     'title'          => __( 'Frontpage Action Row #2', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 5,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -464,7 +464,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	),
 ) );
 
-            
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-action2-title',
 	'label'    => __( 'Action Row #2 - Main Title', 'simple-business-wp' ),
@@ -511,7 +511,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 Kirki::add_section( 'fp-team', array(
     'title'          => __( 'Frontpage Team Section', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 5,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -530,7 +530,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 		'3'  => esc_attr__( 'Hide', 'simple-business-wp' ),
 	),
 ) );
-        
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-team-title',
 	'label'    => __( 'Team - Main Title', 'simple-business-wp' ),
@@ -575,7 +575,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 Kirki::add_section( 'fp-news', array(
     'title'          => __( 'Frontpage Page Content Section', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 5,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -593,7 +593,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 		'2'  => esc_attr__( 'Hide', 'simple-business-wp' ),
 	),
 ) );
-            
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-news-title',
 	'label'    => __( 'Content - Main Title', 'simple-business-wp' ),
@@ -651,7 +651,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 Kirki::add_section( 'fp-contact', array(
     'title'          => __( 'Frontpage Contact Section', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 5,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -670,7 +670,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 		'3'  => esc_attr__( 'Hide', 'simple-business-wp' ),
 	),
 ) );
-            
+
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-contact-title',
 	'label'    => __( 'Contact - Main Title', 'simple-business-wp' ),
@@ -727,7 +727,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 Kirki::add_section( 'blog-settings', array(
     'title'          => __( 'Blog Settings', 'simple-business-wp' ),
     'description'    => '',
-    'panel'          => '', 
+    'panel'          => '',
     'priority'    => 5,
     'capability'     => 'edit_theme_options',
     'theme_supports' => '',
@@ -756,7 +756,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 
 
 
-  
+
 
 
 
