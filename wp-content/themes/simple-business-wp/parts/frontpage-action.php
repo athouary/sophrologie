@@ -19,19 +19,19 @@ if (simple_business_wp_get_option('action-toggle') == "1") {
             <div class="text-center action-block" style="padding-bottom:25px;">
                 <div class="action-paragraph">
                     <p class="action-text">
-                        Grâce à la pratique régulière d’exercices corporels et respiratoires, la sophrologie va vous aider à écouter votre corps et vos émotions.
+                        Grâce&nbsp;à la&nbsp;pratique&nbsp;régulière d’exercices&nbsp;corporels&nbsp;et&nbsp;respiratoires, la&nbsp;sophrologie va&nbsp;vous&nbsp;aider à&nbsp;<span class="action-highlight">écouter&nbsp;votre&nbsp;corps&nbsp;et&nbsp;vos&nbsp;émotions</span>.
                     </p>
                     <div class="action-stuff"></div>
                 </div>
                 <div class="action-paragraph">
                     <p class="action-text">
-                        Au-delà de cet apprentissage, elle vous permet de développer une attitude positive face à la vie, de prendre conscience de vos ressources, de votre potentiel et de porter un nouveau regard, plus bienveillant, sur votre environnement et sur vous-même.
+                        Au-delà&nbsp;de&nbsp;cet&nbsp;apprentissage, elle&nbsp;vous&nbsp;permet&nbsp;de&nbsp;développer une&nbsp;<span class="action-highlight">attitude&nbsp;positive</span> face&nbsp;à&nbsp;la&nbsp;vie, de&nbsp;prendre&nbsp;conscience de&nbsp;vos&nbsp;ressources, de&nbsp;votre&nbsp;potentiel et&nbsp;de&nbsp;porter&nbsp;un&nbsp;nouveau&nbsp;regard, plus&nbsp;bienveillant, sur&nbsp;votre&nbsp;environnement et&nbsp;sur&nbsp;vous-même.
                     </p>
                     <div class="action-stuff"></div>
                 </div>
                 <div class="action-paragraph">
                     <p class="action-text">
-                    La sophrologie est une méthode de développement personnel; pour en mesurer les bienfaits, l’accompagnement peut nécessiter entre 5 et 10 séances.
+                    La&nbsp;sophrologie est&nbsp;une&nbsp;méthode de&nbsp;<span class="action-highlight">développement&nbsp;personnel</span>&nbsp;; pour&nbsp;en&nbsp;mesurer&nbsp;les&nbsp;bienfaits, l’accompagnement&nbsp;peut&nbsp;nécessiter entre&nbsp;5&nbsp;et&nbsp;10&nbsp;séances.
                     </p>
                     <div class="action-stuff"></div>
                 </div>
