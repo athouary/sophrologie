@@ -27,9 +27,9 @@ if (!function_exists('simple_business_wp_setup')):
         // Load feed links
 
         add_theme_support('automatic-feed-links');
-        
+
         // support title tag
-        
+
         add_theme_support( "title-tag" );
 
         // Support Custom Background
@@ -42,9 +42,9 @@ if (!function_exists('simple_business_wp_setup')):
         // Register Menus
 
         register_nav_menu('primary', __('Primary Menu', 'simple-business-wp'));
-        
+
         // Set Content Width
-        
+
         global $content_width;
         if (!isset($content_width)) {
             $content_width = 1168;
@@ -80,15 +80,15 @@ function simple_business_wp_update_migration() {
         	}
         	add_option( 'theme_mods_simple-business-wp_backup', $mod, '', 'yes');
             update_option( 'theme_mods_simple-business-wp', $newmod, '', 'yes');
-        } 
+        }
     }
 }
 
 // Get Options
-    
+
 function simple_business_wp_get_option($optionID, $default_data = false) {
     if (get_theme_mod( $optionID )) {
-        return get_theme_mod( $optionID );   
+        return get_theme_mod( $optionID );
     } else {
         return NULL;
     }
@@ -105,14 +105,14 @@ require_once(get_template_directory() . '/inc/meta_boxes.php');
 /* **************************************************************************************************** */
 // Custom Widgets
 /* **************************************************************************************************** */
- 
+
 require_once(get_template_directory() . '/inc/widgets.php');
 
 
 /* **************************************************************************************************** */
 // Custom NavWalker
 /* **************************************************************************************************** */
- 
+
 require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 
 
@@ -219,8 +219,8 @@ function simple_business_wp_register_sidebars() {
         'before_title' => '<h3 class="widget_title">',
         'after_title' => '</h3>'
     ));
-    
-    
+
+
        // frontpage - about
     register_sidebar(array(
         'id' => 'frontpage-about',
@@ -230,9 +230,9 @@ function simple_business_wp_register_sidebars() {
         'before_title' => '<h4>',
         'after_title' => '</h4>'
     ));
-    
-    
-    
+
+
+
     // frontpage - team - left
     register_sidebar(array(
         'id' => 'frontpage-team-left',
@@ -252,7 +252,7 @@ function simple_business_wp_register_sidebars() {
         'before_title' => '<h4 class="team-item-title">',
         'after_title' => '</h4>'
     ));
-    
+
     // frontpage - team - center right
     register_sidebar(array(
         'id' => 'frontpage-team-center-right',
@@ -262,7 +262,7 @@ function simple_business_wp_register_sidebars() {
         'before_title' => '<h4 class="team-item-title">',
         'after_title' => '</h4>'
     ));
-    
+
     // frontpage - team - right
     register_sidebar(array(
         'id' => 'frontpage-team-right',
@@ -271,8 +271,8 @@ function simple_business_wp_register_sidebars() {
         'after_widget' => '</div>',
         'before_title' => '<h4 class="team-item-title">',
         'after_title' => '</h4>'
-    ));   
-    
+    ));
+
 
     // create 50 alternate sidebar widget areas for use on post and pages
     $i = 1;
@@ -361,19 +361,19 @@ if (!function_exists('simple_business_wp_comment')){
                     <p class="text-left left"><strong><?php comment_author_link(); ?></strong><br />
                     <?php echo(get_comment_date()) ?> <?php edit_comment_link(__('(Edit)', 'simple-business-wp'), '  ', '') ?></p>
                     <div class="clear"></div>
-                    <?php 
+                    <?php
                     if ($comment->comment_approved == '0') {
                     ?>
                         <em><?php _e('Your comment is awaiting moderation.', 'simple-business-wp') ?></em>
-                    <?php 
-                    } 
-                    comment_text(); 
+                    <?php
+                    }
+                    comment_text();
                     ?>
-                </div> 
+                </div>
             </article>
     <?php
     }
-} 
+}
 
 
 /* **************************************************************************************************** */
@@ -443,7 +443,6 @@ add_action('wp_print_styles', 'simple_business_wp_public_styles');
 function simple_business_wp_public_styles() {
     if (!is_admin()) {
         wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '1.0', 'all');
-        wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '1.0', 'all');
         wp_enqueue_style( 'simple_business_wp_source-sans', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic', array(), '1.0', 'all');
         wp_enqueue_style( 'simple_business_wp_pt-sans', '//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700', array(), '1.0', 'all');
         wp_enqueue_style( 'nimbus-style', get_bloginfo( 'stylesheet_url' ), false, get_bloginfo('version') );

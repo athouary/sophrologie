@@ -300,19 +300,17 @@ Kirki::add_field( 'simple-business-wp-config', array(
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'type'        => 'select',
-	'settings'    => 'simple_business_wp_left_featured',
-	'label'       => __( 'Left Featured Page Column - Choose a Page (from latest 50)', 'simple-business-wp' ),
+	'type'        => 'text',
+	'settings'    => 'simple_business_wp_first_featured',
+	'label'       => __( 'First item', 'simple-business-wp' ),
 	'section'     => 'fp-featured',
-	'default'     => simple_business_wp_random_page(),
+	'default'     => 'Titre 1',
 	'priority'    => 5,
-	'multiple'    => 1,
-	'choices'     => Kirki_Helper::get_posts( array( 'posts_per_page' => 50, 'post_type' => 'page' ) ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'settings' => 'simple_business_wp_left_featured_icon',
-	'label'    => __( 'Left Featured Page Column Icon', 'simple-business-wp' ),
+	'settings' => 'simple_business_wp_first_featured_icon',
+	'label'    => __( 'First Icon', 'simple-business-wp' ),
 	'section'  => 'fp-featured',
 	'type'     => 'text',
 	'priority'    => 5,
@@ -321,19 +319,27 @@ Kirki::add_field( 'simple-business-wp-config', array(
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'type'        => 'select',
-	'settings'    => 'simple_business_wp_center_featured',
-	'label'       => __( 'Center Featured Page Column - Choose a Page (from latest 50)', 'simple-business-wp' ),
+	'type'        => 'textarea',
+	'settings'    => 'simple_business_wp_first_featured_text',
+	'label'       => __( 'First text', 'simple-business-wp' ),
 	'section'     => 'fp-featured',
-	'default'     => simple_business_wp_random_page(),
+	'default'     => 'Add text here',
 	'priority'    => 5,
-	'multiple'    => 1,
-	'choices'     => Kirki_Helper::get_posts( array( 'posts_per_page' => 50, 'post_type' => 'page' ) ),
+) );
+
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'type'        => 'text',
+	'settings'    => 'simple_business_wp_second_featured',
+	'label'       => __( 'Second item', 'simple-business-wp' ),
+	'section'     => 'fp-featured',
+	'default'     => 'Titre 2',
+	'priority'    => 5,
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'settings' => 'simple_business_wp_center_featured_icon',
-	'label'    => __( 'Center Featured Page Column Icon', 'simple-business-wp' ),
+	'settings' => 'simple_business_wp_second_featured_icon',
+	'label'    => __( 'Second Icon', 'simple-business-wp' ),
 	'section'  => 'fp-featured',
 	'type'     => 'text',
 	'priority'    => 5,
@@ -342,25 +348,73 @@ Kirki::add_field( 'simple-business-wp-config', array(
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'type'        => 'select',
-	'settings'    => 'simple_business_wp_right_featured',
-	'label'       => __( 'Right Featured Page Column - Choose a Page (from latest 50)', 'simple-business-wp' ),
+	'type'        => 'textarea',
+	'settings'    => 'simple_business_wp_second_featured_text',
+	'label'       => __( 'Second text', 'simple-business-wp' ),
 	'section'     => 'fp-featured',
-	'default'     => simple_business_wp_random_page(),
+	'default'     => 'Add text here',
 	'priority'    => 5,
-	'multiple'    => 1,
-	'choices'     => Kirki_Helper::get_posts( array( 'posts_per_page' => 50, 'post_type' => 'page' ) ),
+) );
+
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'type'        => 'text',
+	'settings'    => 'simple_business_wp_third_featured',
+	'label'       => __( 'Third item', 'simple-business-wp' ),
+	'section'     => 'fp-featured',
+	'default'     => 'Titre 3',
+	'priority'    => 5,
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'settings' => 'simple_business_wp_right_featured_icon',
-	'label'    => __( 'Right Featured Page Column Icon', 'simple-business-wp' ),
+	'settings' => 'simple_business_wp_third_featured_icon',
+	'label'    => __( 'Third Icon', 'simple-business-wp' ),
 	'section'  => 'fp-featured',
 	'type'     => 'text',
 	'priority'    => 5,
-	'default'  => 'fa-bolt',
+	'default'  => 'fa-bomb',
 	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
 ) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'type'        => 'textarea',
+	'settings'    => 'simple_business_wp_third_featured_text',
+	'label'       => __( 'Third text', 'simple-business-wp' ),
+	'section'     => 'fp-featured',
+	'default'     => 'Add text here',
+	'priority'    => 5,
+) );
+
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'type'        => 'text',
+	'settings'    => 'simple_business_wp_fourth_featured',
+	'label'       => __( 'Fourth item', 'simple-business-wp' ),
+	'section'     => 'fp-featured',
+	'default'     => 'Titre 4',
+	'priority'    => 5,
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'simple_business_wp_fourth_featured_icon',
+	'label'    => __( 'Fourth Icon', 'simple-business-wp' ),
+	'section'  => 'fp-featured',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => 'fa-bomb',
+	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'type'        => 'textarea',
+	'settings'    => 'simple_business_wp_fourth_featured_text',
+	'label'       => __( 'Fourth text', 'simple-business-wp' ),
+	'section'     => 'fp-featured',
+	'default'     => 'Add text here',
+	'priority'    => 5,
+) );
+
+
 
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-featured-slug',
