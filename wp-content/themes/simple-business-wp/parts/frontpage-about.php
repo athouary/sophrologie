@@ -1,5 +1,5 @@
 <?php if (simple_business_wp_get_option('fp-about-toggle') == '1') { ?>
-    <section id="<?php if (simple_business_wp_get_option('fp-about-slug')=='') {echo "about";} else {echo esc_attr(simple_business_wp_get_option('fp-about-slug'));} ?>" class="frontpage-about content_squeeze">   
+    <section id="<?php if (simple_business_wp_get_option('fp-about-slug')=='') {echo "about";} else {echo esc_attr(simple_business_wp_get_option('fp-about-slug'));} ?>" class="frontpage-about content_squeeze">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -12,17 +12,30 @@
                     <?php if (simple_business_wp_get_option('fp-about-description') != '') { ?>
                         <p class="about-desc"><?php echo esc_html(simple_business_wp_get_option('fp-about-description')); ?></p>
                     <?php } ?>
-                    <?php if ( is_active_sidebar( 'frontpage-about' ) ) { ?>
-                    	<?php dynamic_sidebar( 'frontpage-about' ); ?>
-                    <?php } ?>
-                </div> 
-            </div>    
-        </div>    
+                    <div class="row frontpage-about-row" data-sr="enter left and move 50px after 1s">
+                        <div class="col-sm-6">
+                            <i class="<?php echo esc_html(simple_business_wp_get_option('fp-about-icon-1'))?>"></i><h4><?php echo simple_business_wp_get_option('fp-about-title-1')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-1')?></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="<?php echo simple_business_wp_get_option('fp-about-icon-2')?>"></i><h4><?php echo simple_business_wp_get_option('fp-about-title-2')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-2')?></p>
+                        </div>
+                    </div>
+                    <div class="row frontpage-about-row"  data-sr="enter left and move 50px after 1s">
+                        <div class="col-sm-6">
+                            <i class="<?php echo simple_business_wp_get_option('fp-about-icon-3')?>"></i><h4><?php echo simple_business_wp_get_option('fp-about-title-3')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-3')?></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <i class="<?php echo simple_business_wp_get_option('fp-about-icon-4')?>"></i><h4><?php echo simple_business_wp_get_option('fp-about-title-4')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-4')?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
      </section>
 <?php } else if (simple_business_wp_get_option('fp-about-toggle') == '3') {
     // Don't do anything
-} else { ?>  
-    <section id="<?php if (simple_business_wp_get_option('fp-about-slug')=='') {echo "about";} else {echo esc_attr(simple_business_wp_get_option('fp-about-slug'));} ?>" class="frontpage-about content_squeeze">   
+} else { ?>
+    <section id="<?php if (simple_business_wp_get_option('fp-about-slug')=='') {echo "about";} else {echo esc_attr(simple_business_wp_get_option('fp-about-slug'));} ?>" class="frontpage-about content_squeeze">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -35,7 +48,7 @@
                         </div>
                         <div class="col-sm-6">
                             <i class="fa fa-bitbucket"></i><h4>BRAND &amp; IDENTITY</h4><p>Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
-                        </div>   
+                        </div>
                     </div>
                     <div class="row frontpage-about-row"  data-sr="enter left and move 50px after 1s">
                         <div class="col-sm-6">
@@ -43,10 +56,10 @@
                         </div>
                         <div class="col-sm-6">
                             <i class="fa fa-bitbucket"></i><h4>BRAND &amp; IDENTITY</h4><p>Praesent faucibus nisl sit amet nulla sollicitudin pretium a sed purus. Nullam bibendum porta magna.</p>
-                        </div>   
+                        </div>
                     </div>
-                </div> 
-            </div>    
-        </div>    
+                </div>
+            </div>
+        </div>
      </section>
-<?php } ?> 
+<?php } ?>

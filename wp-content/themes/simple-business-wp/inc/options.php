@@ -483,12 +483,119 @@ Kirki::add_field( 'simple-business-wp-config', array(
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'type'        => 'custom',
-	'settings'    => 'about-widget-note',
-	'label'       => 'Populate About Content',
-	'section'     => 'fp-about',
-	'default'     => __( 'To populate the About content section, you will need to add About content widgets to the Frontpage About widget areas. Go to the Widgets section under Apperance in the left sidebar.', 'simple-business-wp' ),
+	'settings' => 'fp-about-title-1',
+	'label'    => __( 'Étape 1 - Titre', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
 	'priority'    => 5,
+	'default'  => '',
+	'description'   => __( 'This is the smallest text in the about section. Leave blank to hide.', 'simple-business-wp' ),
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-text-1',
+	'label'    => __( 'Étape 1 - Contenu', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'textarea',
+	'priority'    => 5,
+	'default'  => '',
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-icon-1',
+	'label'    => __( 'Étape 1 - Icone', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => 'fa-bomb',
+	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-title-2',
+	'label'    => __( 'Étape 2 - Titre', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => '',
+	'description'   => __( 'This is the smallest text in the about section. Leave blank to hide.', 'simple-business-wp' ),
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-text-2',
+	'label'    => __( 'Étape 2 - Contenu', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'textarea',
+	'priority'    => 5,
+	'default'  => '',
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-icon-2',
+	'label'    => __( 'Étape 2 - Icone', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => 'fa-bomb',
+	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-title-3',
+	'label'    => __( 'Étape 3 - Titre', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => '',
+	'description'   => __( 'This is the smallest text in the about section. Leave blank to hide.', 'simple-business-wp' ),
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-text-3',
+	'label'    => __( 'Étape 3 - Contenu', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'textarea',
+	'priority'    => 5,
+	'default'  => '',
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-icon-3',
+	'label'    => __( 'Étape 3 - Icone', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => 'fa-bomb',
+	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-title-4',
+	'label'    => __( 'Étape 4 - Titre', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => '',
+	'description'   => __( 'This is the smallest text in the about section. Leave blank to hide.', 'simple-business-wp' ),
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-text-4',
+	'label'    => __( 'Étape 4 - Contenu', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'textarea',
+	'priority'    => 5,
+	'default'  => '',
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-icon-4',
+	'label'    => __( 'Étape 4 - Icone', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => 'fa-bomb',
+	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
