@@ -732,31 +732,47 @@ Kirki::add_field( 'simple-business-wp-config', array(
 
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-team-title',
-	'label'    => __( 'Team - Main Title', 'simple-business-wp' ),
+	'label'    => __( 'Titre', 'simple-business-wp' ),
 	'section'  => 'fp-team',
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => '',
-	'description'   => __( 'This is the big text in the team section. Leave blank to hide.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-team-sub-title',
-	'label'    => __( 'Team - Sub Title', 'simple-business-wp' ),
+	'label'    => __( 'Sous-titre', 'simple-business-wp' ),
+	'section'  => 'fp-team',
+	'type'     => 'textarea',
+	'priority'    => 5,
+	'default'  => '',
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings'    => 'fp-team-image',
+	'label'       => __( 'Image', 'simple-business-wp' ),
+	'section'     => 'fp_team',
+	'type'        => 'image',
+	'priority'    => 5,
+	'default'     => '',
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-team-name',
+	'label'    => __( 'Nom', 'simple-business-wp' ),
 	'section'  => 'fp-team',
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => '',
-	'description'   => __( 'This is the smaller text in the team section. Leave blank to hide.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'type'        => 'custom',
-	'settings'    => 'team-widget-note',
-	'label'       => 'Populate Team Content',
-	'section'     => 'fp-team',
-	'default'     => __( 'To populate the Team content section, you will need to add About content widgets to the Frontpage Team widget areas. Go to the Widgets section under Apperance in the left sidebar.', 'simple-business-wp' ),
+	'settings' => 'fp-team-job',
+	'label'    => __( 'Profession', 'simple-business-wp' ),
+	'section'  => 'fp-team',
+	'type'     => 'text',
 	'priority'    => 5,
+	'default'  => '',
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
