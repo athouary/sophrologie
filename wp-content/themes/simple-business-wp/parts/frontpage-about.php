@@ -14,18 +14,18 @@
                     <?php } ?>
                     <div class="row frontpage-about-row" data-sr="enter left and move 50px after 1s">
                         <div class="col-sm-6">
-                            <i class="<?php echo esc_html(simple_business_wp_get_option('fp-about-icon-1'))?>"></i><h4><?php echo simple_business_wp_get_option('fp-about-title-1')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-1')?></p>
+                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-1'))?>1</i><h4><?php echo simple_business_wp_get_option('fp-about-title-1')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-1')?></p>
                         </div>
                         <div class="col-sm-6">
-                            <i class="<?php echo simple_business_wp_get_option('fp-about-icon-2')?>"></i><h4><?php echo simple_business_wp_get_option('fp-about-title-2')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-2')?></p>
+                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-2'))?>2</i><h4><?php echo simple_business_wp_get_option('fp-about-title-2')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-2')?></p>
                         </div>
                     </div>
                     <div class="row frontpage-about-row"  data-sr="enter left and move 50px after 1s">
                         <div class="col-sm-6">
-                            <i class="<?php echo simple_business_wp_get_option('fp-about-icon-3')?>"></i><h4><?php echo simple_business_wp_get_option('fp-about-title-3')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-3')?></p>
+                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-3'))?>3</i><h4><?php echo simple_business_wp_get_option('fp-about-title-3')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-3')?></p>
                         </div>
                         <div class="col-sm-6">
-                            <i class="<?php echo simple_business_wp_get_option('fp-about-icon-4')?>"></i><h4><?php echo simple_business_wp_get_option('fp-about-title-4')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-4')?></p>
+                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-4'))?>4</i><h4><?php echo simple_business_wp_get_option('fp-about-title-4')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-4')?></p>
                         </div>
                     </div>
                 </div>
