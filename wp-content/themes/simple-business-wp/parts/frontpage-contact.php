@@ -38,7 +38,7 @@
                     ?>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                             <form class="contact-form" name="contact-form" method="post">
+                             <form class="contact-form" name="contact-form" method="post" action="#contact">
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <div class="form-group"><input data-sr="wait 0.3s, enter left and move 50px after 1s" type="text" id="myname" name="myname" placeholder="Nom*" class="form-control input-lg" /></div>
@@ -53,7 +53,7 @@
                                 <div class="text-center">
                                     <input type="hidden" name="scrolltoform" value="<?php if (simple_business_wp_get_option('fp-contact-slug')=='') {echo "contact";} else {echo esc_attr(simple_business_wp_get_option('fp-contact-slug'));} ?>">
                                     <input type="hidden" name="submitted" id="submitted" value="true" />
-                                    <input data-sr="wait 0.3s, enter right and move 50px after 1s" type="submit" name="submit_button" id="submit_button" value="Submit" class="contact-submit btn btn-primary" />
+                                    <input data-sr="wait 0.3s, enter right and move 50px after 1s" type="submit" name="submit_button" id="submit_button" value="Envoyer" class="contact-submit btn btn-primary" />
                                 </div>
                             </form>
                         </div>

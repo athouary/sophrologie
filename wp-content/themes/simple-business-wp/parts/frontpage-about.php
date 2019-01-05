@@ -47,15 +47,13 @@
                 </div>
                 <div class="col-md-12 frontpage-about-second">
                     <div class="frontpage-about-frame">
-                        <div class="frontpage-about-frame">
-                            <div class="frontpage-about-frameColumn">
-                                <h4 class="frontpage-about-frameTitle"><?php echo simple_business_wp_get_option('fp-about-frame-title-1')?></h4>
-                                <p class="frontpage-about-frameText"><?php echo simple_business_wp_get_option('fp-about-frame-text-1')?></p>
-                            </div>
-                            <div class="frontpage-about-frameColumn">
-                                <h4 class="frontpage-about-frameTitle"><?php echo simple_business_wp_get_option('fp-about-frame-title-2')?></h4>
-                                <p class="frontpage-about-frameText"><?php echo simple_business_wp_get_option('fp-about-frame-text-2')?></p>
-                            </div>
+                        <div class="frontpage-about-frameColumn">
+                            <h4 class="frontpage-about-frameTitle"><?php echo simple_business_wp_get_option('fp-about-frame-title-1')?></h4>
+                            <p class="frontpage-about-frameText"><?php echo simple_business_wp_get_option('fp-about-frame-text-1')?></p>
+                        </div>
+                        <div class="frontpage-about-frameColumn">
+                            <h4 class="frontpage-about-frameTitle"><?php echo simple_business_wp_get_option('fp-about-frame-title-2')?></h4>
+                            <p class="frontpage-about-frameText"><?php echo simple_business_wp_get_option('fp-about-frame-text-2')?></p>
                         </div>
                     </div>
                 </div>

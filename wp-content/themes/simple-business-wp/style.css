@@ -34,7 +34,7 @@ a:hover, a:focus { color:#144341;text-decoration:none; }
 .btn { padding: 11px 55px; font-size: 17px; font-weight: 700; }
 .btn-primary { color: #fff; background-color: #169be8; border-color: #169be8; }
 .btn-primary:hover { color: #fff; background-color: #1389ce; border-color: #1389ce; }
-iframe {border:none;} 
+iframe {border:none;}
 .center-block{display:block;margin:0 auto;}
 h1, h1 a { font:400 32px/1.2em 'Source Sans Pro', sans-serif; color:#000000;  text-transform:none; }
 h1 a:hover { color:#535353; }
@@ -108,7 +108,7 @@ header .nav .caret, .navbar-default .navbar-nav>.dropdown>a .caret,.navbar-defau
 .dropdown-menu { border-right: 1px solid #cacaca; border-left: 1px solid #cacaca; border-bottom: 1px solid #cacaca; }
 
 /******************************************************************************************************
-Content 
+Content
 ******************************************************************************************************/
 
 
@@ -253,7 +253,7 @@ ol#comments  ul{ list-style:none; padding:0px; margin: 0px; border:none!importan
 ol#comments li { width:100%;  margin:0px; }
 ol#comments li.depth-1 { padding:0 0 60px 0; }
 ol#comments li.depth-2 { padding:60px 0 0 0; }
-ol#comments li.depth-3, ol#comments li.depth-4, ol#comments li.depth-5, ol#comments li.depth-6, ol#comments li.depth-7, ol#comments li.depth-8, ol#comments li.depth-9, ol#comments li.depth-10  { padding:60px 0 0 0; } 
+ol#comments li.depth-3, ol#comments li.depth-4, ol#comments li.depth-5, ol#comments li.depth-6, ol#comments li.depth-7, ol#comments li.depth-8, ol#comments li.depth-9, ol#comments li.depth-10  { padding:60px 0 0 0; }
 ol#comments li:last-child { padding-bottom:0px; }
 ol#comments li.depth-2 img.avatar  { margin:0 0 0 68px; }
 ol#comments li.depth-3 img.avatar, ol#comments li.depth-4 img.avatar, ol#comments li.depth-5 img.avatar, ol#comments li.depth-6 img.avatar, ol#comments li.depth-7 img.avatar, ol#comments li.depth-8 img.avatar, ol#comments li.depth-9 img.avatar, ol#comments li.depth-10 img.avatar  { margin:0 0 0 136px; }
@@ -292,7 +292,7 @@ div.content .widget ul, div.content  .widget ol, .widget ul, .widget ol{  margin
 .widget fieldset { display: block; width: 89%; padding:5%; margin: 0 auto; border:1px solid #b6b6b6; }
 .widget legend { padding: 4px 10px; border:1px solid #b6b6b6; background: #fff; text-transform: uppercase; margin-left: 0.5em; }
 .widget select { padding: 4px; border:1px solid #b6b6b6; background: #fff; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  }
-.widget button:hover, input[type=submit]:hover  { text-decoration:none;  } 
+.widget button:hover, input[type=submit]:hover  { text-decoration:none;  }
 .widget input[type=image] { border:none; }
 
 /* Tables */
@@ -316,7 +316,7 @@ div.content .widget ul, div.content  .widget ol, .widget ul, .widget ol{  margin
 
 .rss-date { font-size:11px; }
 .rssSummary { font-size:11px; }
-#sidebar cite { font-size:11px; font-style:normal; } 
+#sidebar cite { font-size:11px; font-style:normal; }
 
 /* Recent Comments */
 
@@ -359,7 +359,7 @@ body > .container .row.content_squeeze.frontpage_featured { background:#e5e5e5; 
 body > .container .row.content_squeeze.action_row { padding-top:35px; padding-bottom:35px; }
 body > .container .row.content_squeeze.frontpage_featured { padding:110px 0 120px; text-align:center; margin-bottom:0px; }
 body > .container .row.content_squeeze.frontpage_featured > div > div { text-align:center; }
-body > .container .row.content_squeeze.frontpage_featured i { font-size:90px; color: #59a4a0; }
+body > .container .row.content_squeeze.frontpage_featured i { font-size:90px; color: #efd4b7; }
 .frontpage_featured_item { padding:0 20px; }
 body > .container .row.content_squeeze.content_only_banner { padding-top:40px;  }
 .featured-title{text-align:center;text-transform: uppercase;margin-top: 0px; margin-bottom:10px;}
@@ -455,7 +455,7 @@ Responsive
  .menu_sticky.container {width: 1168px; }
 }
 
-@media (min-width: 768px)  { 
+@media (min-width: 768px)  {
     .navbar-nav { float: none!important; }
 }
 

@@ -28,9 +28,9 @@
                 </div>
             </div>
             <div class="row link-image-row">
-                <a href="http://www.rncp.cncp.gouv.fr/grand-public/visualisationFiche?format=fr&fiche=13375"><img class="img-responsive center-block link-image" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/01/cncp-e1546697437540-300x235.jpg" /></a>
-                <a href="https://www.sophrologie-formation.fr"><img class="img-responsive center-block link-image" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/01/aliotta-300x300.jpg" /></a>
-                <a href="https://www.chambre-syndicale-sophrologie.fr/titre-rncp/"><img class="img-responsive center-block link-image" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/01/css-300x295.png" /></a>
+                <a target="_blank" href="http://www.rncp.cncp.gouv.fr/grand-public/visualisationFiche?format=fr&fiche=13375"><img class="img-responsive center-block link-image" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/01/cncp-e1546697437540-300x235.jpg" /></a>
+                <a target="_blank" href="https://www.sophrologie-formation.fr"><img class="img-responsive center-block link-image" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/01/aliotta-300x300.jpg" /></a>
+                <a target="_blank" href="https://www.chambre-syndicale-sophrologie.fr/titre-rncp/"><img class="img-responsive center-block link-image" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/01/css-300x295.png" /></a>
             </div>
         </div>
     </section>

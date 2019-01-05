@@ -1,16 +1,5 @@
 <div class="row content_squeeze menu_sticky">
     <nav id="menu_row" class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand visible-xs" href="<?php echo esc_url(home_url('/')); ?>">
-                    <?php bloginfo('name'); ?>
-                </a>
-            </div>
             <?php
                 wp_nav_menu( array(
                     'theme_location'    => 'primary',
@@ -24,5 +13,9 @@
             ?>
     </nav>
 </div>
-
-  
+<button type="button" class="nav-button navbar-toggle visible-xs" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+</button>
