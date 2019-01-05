@@ -94,6 +94,9 @@ class SLN_Admin_Tools extends SLN_Admin_AbstractPage
         $tmpfname = tempnam("/tmp", "sln-export-");
 
         $fh = fopen($tmpfname, "w");
+
+        fwrite( $fh, chr( 239 ) . chr( 187 ) . chr( 191 ) );
+
         fputcsv(
             $fh,
             array(

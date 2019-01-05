@@ -35,6 +35,7 @@ class SLN_Currency
         'JMD' => array('name' => 'Jamaican Dollar', 'symbol' => 'J$', 'ASCII' => ''),
         'KES' => array('name' => 'Kenyan Shilling', 'symbol' => 'KSh', 'ASCII' => ''),
         'KZT' => array('name' => 'Kazakhstani tenge', 'symbol' => '₸', 'ASCII' => ''),
+        'MMK' => array('name' => 'Burmese kyat', 'symbol' => 'K', 'ASCII' => ''),
         'Leu' => array('name' => 'Moldovan leu', 'symbol' => 'Leu', 'ASCII' => ''),
         'MXN' => array('name' => 'Mexican Peso', 'symbol' => '$', 'ASCII' => '&#36;'),
         'MUR' => array('name' => 'Mauritian Rupee', 'symbol' => '₨', 'ASCII' => ''),

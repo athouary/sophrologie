@@ -139,18 +139,25 @@ class SLN_Action_Ajax_Calendar extends SLN_Action_Ajax_Abstract
      */
     private function wrapBooking($booking)
     {
+        $format = SLN_Plugin::getInstance()->format();
+
         $ret = array(
-            "id" => $booking->getId(),
-            "title" => $this->getTitle($booking),
-            "customer" => $booking->getFirstname(),
+            "id"          => $booking->getId(),
+            "title"       => $this->getTitle($booking),
+            "from"        => $format->time($booking->getStartsAt()),
+            "to"          => $format->time($booking->getEndsAt()),
+            "from_label"  => __('from', 'salon-booking-system'),
+            "to_label"    => __('to', 'salon-booking-system'),
+            "status"      => SLN_Enum_BookingStatus::getLabel($booking->getStatus()),
+            "customer"    => $booking->getFirstname(),
             "customer_id" => (int) $booking->getUserId(),
-            "services" => $booking->getServicesIds(),
-            "items" => $booking->getBookingServices()->toArrayRecursive(),
-            "url" => get_edit_post_link($booking->getId()),
-            "class" => "event-".SLN_Enum_BookingStatus::getColor($booking->getStatus()),
-            "start" => $booking->getStartsAt('UTC')->format('U') * 1000,
-            "end" => $booking->getEndsAt('UTC')->format('U') * 1000,
-            "event_html" => $this->getEventHtml($booking),
+            "services"    => $booking->getServicesIds(),
+            "items"       => $booking->getBookingServices()->toArrayRecursive(),
+            "url"         => get_edit_post_link($booking->getId()),
+            "class"       => "event-" . SLN_Enum_BookingStatus::getColor($booking->getStatus()),
+            "start"       => $booking->getStartsAt('UTC')->format('U') * 1000,
+            "end"         => $booking->getEndsAt('UTC')->format('U') * 1000,
+            "event_html"  => $this->getEventHtml($booking),
         );
 
         return apply_filters('sln.action.ajaxcalendar.wrapBooking', $ret, $booking);

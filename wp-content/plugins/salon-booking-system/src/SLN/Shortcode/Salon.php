@@ -54,6 +54,24 @@ class SLN_Shortcode_Salon
                 if (!$obj->isValid()) {
                     return $this->render($obj->render());
                 }
+
+                if (in_array('attendant', $steps) || !$this->plugin->getSettings()->isAttendantsEnabled()) {
+                    continue;
+                }
+
+                if (!in_array('secondary', $steps) && $step === 'services' || $step === 'secondary' && $curr === 'secondary') {
+                    if (!$obj->setAttendantsAuto()) {
+                        return $this->render($obj->render());
+                    }
+		    continue;
+                }
+
+                if ($step === 'secondary') {
+                    $o = $this->getStepObject('services');
+                    if (!$o->setAttendantsAuto()) {
+                        return $this->render($o->render());
+                    }
+                }
             }
         }
     }
@@ -90,8 +108,8 @@ class SLN_Shortcode_Salon
     protected function render($content)
     {
         $salon = $this;
-        return $this->plugin->loadView('shortcode/salon', compact('content', 'salon'));
-    }
+            return $this->plugin->loadView('shortcode/salon', compact('content', 'salon'));
+        }
 
 
     public function getCurrentStep()

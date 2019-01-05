@@ -20,6 +20,7 @@ if ($plugin->getSettings()->isDisabled()) {
 	$services = $step->getServices();
 	?>
 	    <?php include '_errors.php'; ?>
+            <?php include '_additional_errors.php'; ?>
 	<form id="salon-step-services" method="post" action="<?php echo $formAction ?>" role="form">
 		<?php
 		$args = array(

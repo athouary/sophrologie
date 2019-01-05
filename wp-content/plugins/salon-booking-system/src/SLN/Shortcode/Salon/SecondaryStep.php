@@ -17,36 +17,7 @@ class SLN_Shortcode_Salon_SecondaryStep extends SLN_Shortcode_Salon_Step
 
         $bb->save();
 
-        if (!$this->getPlugin()->getSettings()->isAttendantsEnabled() || !$this->getPlugin()->getSettings()->isAttendantsEnabledOnlyBackend()) {
-            return true;
-        }
-
-        if ($this->getPlugin()->getSettings()->isMultipleAttendantsEnabled()) {
-
-            $ids = array();
-
-            foreach ($bb->getServicesIds() as $sId) {
-                $ids[$sId] = '';
-            }
-
-            $_POST['sln']['attendants'] = $ids;
-        } else {
-            $_POST['sln']['attendant'] = '';
-        }
-
-        $_POST['submit_attendant'] = 'next';
-
-        $attendantStep = $this->getShortcode()->getStepObject('attendant');
-
-        if ($attendantStep->isValid()) {
-            return true;
-        }
-
-        foreach ($attendantStep->getErrors() as $error) {
-            $this->addError($error);
-        }
-
-        return false;
+        return true;
     }
 
     /**

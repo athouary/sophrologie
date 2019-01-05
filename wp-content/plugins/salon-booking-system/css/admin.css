@@ -7347,3 +7347,58 @@ body.salone_page_salon-tools #wpwrap {
 html.in-iframe {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
+
+/* OVERRIDS DEC 2018 */
+.day-event-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.day-event-item__from-time {
+    display: block;
+    font-size: 12px;
+    line-height: 1.2em;
+    margin: 5px 0 0;
+    color: #000;
+}
+
+.day-event-item__to-time {
+    display: block;
+    font-size: 12px;
+    line-height: 1.2em;
+    color: #000;
+}
+
+.day-event-item__status-block {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+}
+
+.day-event-item__status-block__status {
+    display: block;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1.1em;
+    padding-bottom: .5em;
+}
+#cal-day-box .day-highlight:hover {
+  text-decoration: none !important;
+}
+.day-highlight:hover {
+  filter: saturate(200%);
+}
+/*
+.salon_page_salon-calendar .sln-calendar--wrapper #cal-day-box .day-event.break-down.day-highlight,
+.sln-calendar--wrapper #cal-day-box .day-event.break-down.day-highlight {
+  border-top-width: 10px; }
+.salon_page_salon-calendar .sln-calendar--wrapper #cal-day-box .day-event.no-border-top.day-highlight,
+.sln-calendar--wrapper #cal-day-box .day-event.no-border-top.day-highlight {
+border-top-width: 60px; }*/
+.salon_page_salon-calendar .sln-calendar--wrapper #cal-day-box .day-event.no-border-top.day-highlight[data-original-title*="<strong>"],
+.sln-calendar--wrapper #cal-day-box .day-event.no-border-top.day-highlight[data-original-title*="<strong>"] {
+  border-top-width: 1px; }
+/* OVERRIDS DEC 2018 // END */

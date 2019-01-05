@@ -74,14 +74,48 @@ abstract class SLN_Shortcode_Salon_Step
         return !empty($this->errors);
     }
 
-    public function addAdditionalError($err)
-    {
+    public function addAdditionalError($err) {
         $this->additional_errors[] = $err;
     }
 
-    public function getAddtitionalErrors()
-    {
+    public function getAddtitionalErrors() {
         return $this->additional_errors;
+    }
+
+    public function setAttendantsAuto() {
+
+        if( ! $this->getPlugin()->getSettings()->isAttendantsEnabled() ) {
+            return true;
+        }
+
+        $bb = $this->getPlugin()->getBookingBuilder();
+
+        if ($this->getPlugin()->getSettings()->isMultipleAttendantsEnabled()) {
+
+            $ids = array();
+
+            foreach ($bb->getServicesIds() as $sId) {
+                $ids[$sId] = '';
+            }
+
+            $_POST['sln']['attendants'] = $ids;
+        } else {
+            $_POST['sln']['attendant'] = '';
+        }
+
+        $_POST['submit_attendant'] = 'next';
+
+        $attendantStep = $this->getShortcode()->getStepObject('attendant');
+
+        if ($attendantStep->isValid()) {
+            return true;
+        }
+
+        foreach ($attendantStep->getErrors() as $error) {
+            $this->addAdditionalError($error);
+        }
+
+        return false;
     }
 
 }

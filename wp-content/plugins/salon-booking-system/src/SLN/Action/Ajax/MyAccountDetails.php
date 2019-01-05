@@ -9,10 +9,18 @@ class SLN_Action_Ajax_MyAccountDetails extends SLN_Action_Ajax_Abstract
 		}
 
 		$args = array();
+
 		if (isset($_POST['args'])) {
-			$args = [];
-			if(!empty( $_POST['page'] )) $args['page'] = intval($_POST['page']);
-			if(!empty( $_POST['part'] )) $args['part'] = sanitize_text_field(wp_unslash($_POST['part']));
+
+		    $args = [];
+
+		    if( isset( $_POST['args']['page'] ) && !empty( $_POST['args']['page'] )) {
+			$args['page'] = intval($_POST['args']['page']);
+		    }
+
+		    if( isset( $_POST['args']['part'] ) && !empty( $_POST['args']['part'] )) {
+			$args['part'] = sanitize_text_field(wp_unslash($_POST['args']['part']));
+		    }
 		}
 
 		$shortcode  = "[" . SLN_Shortcode_SalonMyAccount_Details::NAME;

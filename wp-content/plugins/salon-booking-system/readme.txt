@@ -2,8 +2,8 @@
 Contributors: Wpchef
 Tags: booking, reservations, barber shop, hair salon, beauty center, spas, scheduling, appointment, availability calendar, booking calendar, online reservation, schedule, Paypal appointment, appointment calendar, booking software, reservation plugin, booking engine, booking plugin
 Requires at least: 4.1
-Tested up to: 4.9.8
-Stable tag: 3.26.1
+Tested up to: 5.0
+Stable tag: 3.26.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -291,6 +291,23 @@ Look at this guide: https://www.salonbookingsystem.com/divi-theme-accordions-iss
 
 
 == Changelog ==
+
+03.01.2019
+
+* Fixed bug on front-end booking form 
+* Fixed bug on conditional secondary services
+* Fixed bug with Bulgarian language
+
+
+
+
+18.12.2018
+
+* Fixed bug with Chinese languages
+* Fixed bug with back-end calendar weekly view
+* Fixed bug with "Assistant selection > only from back-end"
+* Fixed bug with WPML
+* Improved bookings representation on daily view
 
 03.12-2018
 

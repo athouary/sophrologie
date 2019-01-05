@@ -33,12 +33,12 @@
       "Ebr",
       "Mai",
       "Meh",
-      "Gorf",
-      "Aws",
-      "Med",
+      "Gor",
+      "Awst",
+      "Medi",
       "Hyd",
       "Tach",
-      "Rha"
+      "Rhag"
     ],
     meridiem: ["am", "pm"],
     today: "Heddiw"

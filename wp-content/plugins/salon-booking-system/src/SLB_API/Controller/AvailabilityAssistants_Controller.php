@@ -42,7 +42,7 @@ class AvailabilityAssistants_Controller extends REST_Controller
                     'default'     => array(),
                     'items'             => array(
                         'type'       => 'object',
-                        'required'   => array('service_id', 'assistant_id'),
+                        'required'   => array('service_id'),
                         'properties' => array(
                             'service_id' =>  array(
                                 'type' => 'integer',
@@ -55,7 +55,7 @@ class AvailabilityAssistants_Controller extends REST_Controller
                 ),
             ),
             array(
-                'methods'  => WP_REST_Server::READABLE,
+                'methods'  => WP_REST_Server::CREATABLE,
                 'callback' => array($this, 'get_assistants'),
             ),
         ) );
@@ -68,11 +68,11 @@ class AvailabilityAssistants_Controller extends REST_Controller
 
         foreach ($request->get_param('services') as $s) {
 
-            if (!isset($s['service_id']) || !isset($s['assistant_id'])) {
+            if (!isset($s['service_id'])) {
                 continue;
             }
 
-            $services[$s['service_id']] = $s['assistant_id'];
+            $services[$s['service_id']] = isset($s['assistant_id']) ? $s['assistant_id'] : 0;
         }
 
         $ret = $this->validate(
@@ -89,47 +89,58 @@ class AvailabilityAssistants_Controller extends REST_Controller
 
     public function validate($services, $date, $ah)
     {
-        $assistants = array();
+        $rservices  = array();
         $isValid    = true;
 
         $ah->setDate($date);
 
         $bookingServices = SLN_Wrapper_Booking_Services::build($services, $date);
 
-        $availAttsForEachService = array();
-
         foreach ($bookingServices->getItems() as $bookingService) {
 
             $service   = $bookingService->getService();
             $serviceId = $service->getId();
 
-            if (!$service->isAttendantsEnabled()) {
-                $assistants[$serviceId] = array();
+            $rservice  = array(
+                'service_id'   => $serviceId,
+                'service_name' => $service->getName(),
+                'assistants'   => array(),
+            );
+
+            if ( ! $service->isAttendantsEnabled() ) {
+                $rservices[] = $rservice;
                 continue;
             }
 
-            $availAttsForEachService = $ah->getAvailableAttsIdsForBookingService($bookingService);
+            $availAttsForService = $ah->getAvailableAttsIdsForBookingService($bookingService);
 
             $tmpAssistants       = array();
             $selectedAttendantId = $services[$serviceId];
 
-            foreach ($availAttsForEachService as $attId) {
+            foreach ($availAttsForService as $attId) {
+
+                $attendant = SLN_Plugin::getInstance()->createAttendant($attId);
+
                 $tmpAssistants[$attId] = array(
-                    'available' => true,
-                    'selected'  => $attId === $selectedAttendantId,
-                    'error'     => '',
+                    'assistant_id'   => $attendant->getId(),
+                    'assistant_name' => $attendant->getName(),
+                    'available'      => true,
+                    'selected'       => $attId === $selectedAttendantId,
+                    'error'          => '',
                 );
             }
 
-            if ( $selectedAttendantId && ! in_array($selectedAttendantId, $availAttsForEachService) ) {
+            if ( $selectedAttendantId && ! in_array($selectedAttendantId, $availAttsForService) ) {
 
                 $attendant = SLN_Plugin::getInstance()->createAttendant($selectedAttendantId);
 
                 $tmpAssistants[$selectedAttendantId] = array(
-                    'available' => false,
-                    'selected'  => false,
-                    'error'     => sprintf(
-                        __('Attendant %s isn\'t available for %s service at %s', 'salon-booking-system'),
+                    'assistant_id'   => $attendant->getId(),
+                    'assistant_name' => $attendant->getName(),
+                    'available'      => false,
+                    'selected'       => false,
+                    'error'          => sprintf(
+                        __("Attendant %s isn't available for %s service at %s", 'salon-booking-system'),
                         $attendant->getName(),
                         $service->getName(),
                         $ah->getDayBookings()->getTime(
@@ -142,12 +153,13 @@ class AvailabilityAssistants_Controller extends REST_Controller
                 $isValid = false;
             }
 
-            $assistants[$serviceId] = $tmpAssistants;
+            $rservice['assistants'] = array_values($tmpAssistants);
+            $rservices[]            = $rservice;
         }
 
         return array(
-            'is_valid'   => $isValid,
-            'assistants' => $assistants,
+            'is_valid' => $isValid,
+            'services' => $rservices,
         );
     }
 

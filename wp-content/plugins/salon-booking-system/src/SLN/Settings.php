@@ -341,6 +341,12 @@ class SLN_Settings
                 : get_locale()
             );
         if( setlocale(LC_TIME,0) !== $locale  ){ setlocale(LC_TIME, $locale ); }
-        return get_locale(LC_TIME);
+
+        if (defined('ICL_LANGUAGE_CODE')) {
+            $languages = icl_get_languages();
+            return $languages[ICL_LANGUAGE_CODE]['default_locale'];
+        }
+
+        return get_locale();
     }
 }

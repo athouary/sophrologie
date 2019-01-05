@@ -118,6 +118,7 @@ body.modal-open {overflow: hidden;}
       border: none !important;
       tr {
         border: none !important;
+        background-color: #eee;
       }
       td {
         color: #555555;
@@ -127,13 +128,14 @@ body.modal-open {overflow: hidden;}
         text-align: center;
         text-transform: uppercase;
         border: none !important;
-        border-bottom: 2px solid #4c4c4c !important;
+        border-bottom: 1px solid #ddd !important;
         font-size: .7em;
       }
       tbody td {
         border: none !important;
-        border-bottom: 2px solid #4c4c4c !important;
+        border-bottom: 1px solid #ddd !important;
         font-size: 13px !important;
+        &:last-child {border-bottom: none !important;}
       }
       tbody tr td:nth-child(6) {
         text-transform: uppercase;
@@ -317,7 +319,7 @@ body.modal-open {overflow: hidden;}
         text-align:   left;
         border:       none;
         padding-right: 10px;
-        padding-left: 10em;
+        padding-left: 12em;
         position:     relative;
         min-height: 52px;
         border-bottom: solid 1px $bg-contrast-high;
@@ -328,18 +330,20 @@ body.modal-open {overflow: hidden;}
       }
       td:nth-child(2),
       td:last-child {
-        max-width: auto;
         max-width:  initial !important;
         width:      100% !important;
       }
       td:before {
         content:        attr(data-th) ": ";
-        font-weight:    bold;
-        text-transform: uppercase;
-        color:          #0073a4;
+        font-weight:    normal;
+        color:          inherit;
         max-width:          10em;
         display:        inline-block;
         position:       absolute;
+        //top: 50%;
+        //-webkit-transform: translateY(-50%);
+        //-ms-transform: translateY(-50%);
+        //transform: translateY(-50%);
         left:           1em;
         @include ie11() {
           max-width: 12rem;

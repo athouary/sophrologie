@@ -42,7 +42,7 @@ class AvailabilityIntervals_Controller extends REST_Controller
                     'validate_callback' => array($this, 'rest_validate_request_arg'),
                     'items'             => array(
                         'type'       => 'object',
-                        'required'   => array('service_id', 'assistant_id'),
+                        'required'   => array('service_id'),
                         'properties' => array(
                             'service_id' =>  array(
                                 'type' => 'integer',
@@ -55,7 +55,7 @@ class AvailabilityIntervals_Controller extends REST_Controller
                 ),
             ),
             array(
-                'methods'  => WP_REST_Server::READABLE,
+                'methods'  => WP_REST_Server::CREATABLE,
                 'callback' => array($this, 'get_intervals'),
             ),
         ) );
@@ -71,11 +71,11 @@ class AvailabilityIntervals_Controller extends REST_Controller
 
             foreach ($request->get_param('services') as $s) {
 
-                if (!isset($s['service_id']) || !isset($s['assistant_id'])) {
+                if (!isset($s['service_id'])) {
                     continue;
                 }
 
-                $services[$s['service_id']] = $s['assistant_id'];
+                $services[$s['service_id']] = isset($s['assistant_id']) ? $s['assistant_id'] : 0;
             }
 
             $plugin->getBookingBuilder()->setServicesAndAttendants($services);

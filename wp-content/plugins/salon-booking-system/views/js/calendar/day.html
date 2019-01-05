@@ -20,9 +20,21 @@
 			<div class="span11 col-xs-11">
 				<% _.each(all_day, function(event){ %>
 					<div class="day-highlight dh-<%= event.class %>">
-						<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
-						   data-event-class="<%= event['class'] %>" class="event-item">
-							<%= event.customer %></a>
+                                            <a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
+						   data-event-class="<%= event['class'] %>" class="event-item day-event-item">
+                                                <span class="day-event-item__customer">
+                                                    <%= event.customer %>
+                                                </span>
+                                                <span class="day-event-item__from-time">
+                                                    <%= event.from_label %> <%= event.from %>
+                                                </span>
+                                                <span class="day-event-item__to-time">
+                                                    <%= event.to_label %> <%= event.to %>
+                                                </span>
+                                                <span class="day-event-item__status-block">
+                                                    <span class="day-event-item__status-block__status"><%= event.status %></span>
+                                                </span>
+                                            </a>
 					</div>
 				<% }); %>
 			</div>
@@ -36,8 +48,20 @@
 					<div class="day-highlight dh-<%= event.class %>">
 <!--						<span class="cal-hours pull-right"><%= event.end_hour %></span> -->
 						<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
-						   data-event-class="<%= event['class'] %>" class="event-item">
-							<%= event.customer %></a>
+						   data-event-class="<%= event['class'] %>" class="event-item day-event-item">
+                                                    <span class="day-event-item__customer">
+                                                        <%= event.customer %>
+                                                    </span>
+                                                    <span class="day-event-item__from-time">
+                                                        <%= event.from_label %> <%= event.from %>
+                                                    </span>
+                                                    <span class="day-event-item__to-time">
+                                                        <%= event.to_label %> <%= event.to %>
+                                                    </span>
+                                                    <span class="day-event-item__status-block">
+                                                        <span class="day-event-item__status-block__status"><%= event.status %></span>
+                                                    </span>
+                                                </a>
 					</div>
 				<% }); %>
 			</div>
@@ -52,9 +76,22 @@
 			<% }; %>
 			<% _.each(by_hour, function(event){ %>
 				<div class="day-event day-highlight dh-<%= event.class %>" style="margin-left: <%= event.left * 7.6 %>%; top: <%= (event.top * 60) %>px; height: <%= (event.lines * 60) %>px !important" data-toggle="tooltip" data-html="true" title="<%= event.title %>">
-					<span data-event-id="<%= event.id %>" data-event-class="<%= event['class'] %>"
-	                      class="event-item"><%= event.customer %></span>
-				</div>
+                                    <span data-event-id="<%= event.id %>" data-event-class="<%= event['class'] %>"
+                                          class="event-item day-event-item">
+                                        <span class="day-event-item__customer">
+                                            <%= event.customer %>
+                                        </span>
+                                        <span class="day-event-item__from-time">
+                                            <%= event.from_label %> <%= event.from %>
+                                        </span>
+                                        <span class="day-event-item__to-time">
+                                            <%= event.to_label %> <%= event.to %>
+                                        </span>
+                                        <span class="day-event-item__status-block">
+                                            <span class="day-event-item__status-block__status"><%= event.status %></span>
+                                        </span>
+                                    </span>
+                                </div>
 			<% }); %>
 
 			<div id="cal-day-panel-hour">
@@ -80,8 +117,20 @@
 			<div class="day-highlight dh-<%= event.class %>">
 				<span class="cal-hours"><%= event.start_hour %></span>
 				<a href="<%= event.url ? event.url : 'javascript:void(0)' %>" data-event-id="<%= event.id %>"
-				   data-event-class="<%= event['class'] %>" class="event-item">
-					<%= event.customer %></a>
+				   data-event-class="<%= event['class'] %>" class="event-item day-event-item">
+                                    <span class="day-event-item__customer">
+                                        <%= event.customer %>
+                                    </span>
+                                    <span class="day-event-item__from-time">
+                                        <%= event.from_label %> <%= event.from %>
+                                    </span>
+                                    <span class="day-event-item__to-time">
+                                        <%= event.to_label %> <%= event.to %>
+                                    </span>
+                                    <span class="day-event-item__status-block">
+                                        <span class="day-event-item__status-block__status"><%= event.status %></span>
+                                    </span>
+                                </a>
 			</div>
 			<% }); %>
 		</div>

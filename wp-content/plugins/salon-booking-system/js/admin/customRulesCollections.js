@@ -35,7 +35,7 @@ function initBookingRules(elem) {
     prototype.remove();
 
 
-    jQuery('button[data-collection="addnew"]').click(function (e) {
+    jQuery('button[data-collection="addnew"]', elem).click(function (e) {
         count++;
         e.preventDefault();
         wrapper.append(html.replace(/__new__/g, count));
@@ -44,7 +44,7 @@ function initBookingRules(elem) {
         initDatepickers(jQuery);
         initTimepickers(jQuery)
         customSliderRange(jQuery, jQuery('.slider-range'))
-        jQuery('[data-unhide]').change();
+        jQuery('[data-unhide]', elem).change();
     });
     bindRemove();
 }
@@ -57,7 +57,8 @@ function initBookingHolidayRules(elem) {
     prototype.remove();
 
 
-    jQuery('button[data-collection="addnewholiday"]').click(function (e) {
+    jQuery('button[data-collection="addnewholiday"]', elem).click(function (e) {
+
         e.preventDefault();
         wrapper.append(html.replace(/__new__/g, count));
         count++;

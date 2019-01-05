@@ -177,8 +177,8 @@ class SLN_Action_InitScripts
 
     public static function enqueueDateTimePicker()
     {
-        $date_lang =  get_locale();
-        
+        $date_lang =  SLN_Plugin::getInstance()->getSettings()->getDateLocale();
+
         wp_enqueue_script(
             'smalot-datepicker',
             SLN_PLUGIN_URL.'/js/bootstrap-datetimepicker.js',

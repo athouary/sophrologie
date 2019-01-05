@@ -525,8 +525,13 @@ if(!String.prototype.formatNum) {
                                             var objs = $self.applyAdvancedFilters([{
                                                 id: 	  	 e.id,
                                                 title:           k === 0 ? e.title : '',
+                                                from:            k === 0 ? e.from : '',
+                                                to:              k === 0 ? e.to : '',
+                                                from_label:      k === 0 ? e.from_label : '',
+                                                to_label:        k === 0 ? e.to_label : '',
+                                                status:          e.items.length - 1 === k ? e.status : '',
                                                 customer:        k === 0 ? e.customer : '',
-                                                customer_id: e.customer_id,
+                                                customer_id:     e.customer_id,
                                                 services: 	 [item.service],
                                                 class: 	  	 e.class + (classes || ''),
                                                 url: 	  	 e.url,
@@ -699,6 +704,11 @@ if(!String.prototype.formatNum) {
                                             var objs = $self.applyAdvancedFilters([{
                                                 id: 	  	 e.id,
                                                 title:           k === 0 ? e.title : '',
+                                                from:            k === 0 ? e.from : '',
+                                                to:              k === 0 ? e.to : '',
+                                                from_label:      k === 0 ? e.from_label : '',
+                                                to_label:        k === 0 ? e.to_label : '',
+                                                status:          e.items.length - 1 === k ? e.status : '',
                                                 customer:        k === 0  ? e.customer : '',
                                                 customer_id: e.customer_id,
                                                 services: 	 [item.service],
@@ -937,9 +947,17 @@ if(!String.prototype.formatNum) {
 		var end = parseInt(this.options.position.end.getTime());
 		var events = [];
 		var self = this;
-		var first_day = getExtentedOption(this, 'first_day');
+		var first_day = parseInt(getExtentedOption(this, 'first_day'));
 		$.each(this.getEventsBetween(start, end), function(k, event) {
-      		event.start_day = new Date(parseInt(event.start)).getDay();
+      		event.start_day = new Date(parseInt(event.start)).getDay();      		
+			if( first_day - event.start_day === 0){
+				event.start_day = 0;
+			}
+			else if( first_day - event.start_day > 0){
+				event.start_day = event.start_day + ( 7-first_day);
+			}else if( first_day - event.start_day  < 0 ){
+				event.start_day =  event.start_day - first_day ;
+			}
 
 			if((event.end - event.start) <= 86400000) {
 				event.days = 1;

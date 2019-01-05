@@ -136,11 +136,16 @@ class AvailabilityServices_Controller extends REST_Controller
 
         $result = array();
 
-        foreach ($services as $i => $s) {
-            $result[$i] = array(
-                'available' => SLN_Action_Ajax_CheckServices::STATUS_ERROR === $s['status'] ? false : true,
-                'selected'  => SLN_Action_Ajax_CheckServices::STATUS_ERROR === $s['status'] ? false : ($s['status'] ? true : false),
-                'error'     => $s['error'],
+        foreach ($services as $serviceID => $s) {
+
+            $service = SLN_Plugin::getInstance()->createService($serviceID);
+
+            $result[] = array(
+                'service_id'   => $service->getId(),
+                'service_name' => $service->getName(),
+                'available'    => SLN_Action_Ajax_CheckServices::STATUS_ERROR === $s['status'] ? false : true,
+                'selected'     => SLN_Action_Ajax_CheckServices::STATUS_ERROR === $s['status'] ? false : ($s['status'] ? true : false),
+                'error'        => $s['error'],
             );
         }
 
@@ -183,11 +188,16 @@ class AvailabilityServices_Controller extends REST_Controller
 
         $result = array();
 
-        foreach ($services as $i => $s) {
-            $result[$i] = array(
-                'available' => SLN_Action_Ajax_CheckServices::STATUS_ERROR === $s['status'] ? false : true,
-                'selected'  => SLN_Action_Ajax_CheckServices::STATUS_ERROR === $s['status'] ? false : ($s['status'] ? true : false),
-                'error'     => $s['error'],
+        foreach ($services as $serviceID => $s) {
+
+            $service = SLN_Plugin::getInstance()->createService($serviceID);
+
+            $result[] = array(
+                'service_id'   => $service->getId(),
+                'service_name' => $service->getName(),
+                'available'    => SLN_Action_Ajax_CheckServices::STATUS_ERROR === $s['status'] ? false : true,
+                'selected'     => SLN_Action_Ajax_CheckServices::STATUS_ERROR === $s['status'] ? false : ($s['status'] ? true : false),
+                'error'        => $s['error'],
             );
         }
 
