@@ -454,32 +454,29 @@ Kirki::add_field( 'simple-business-wp-config', array(
 
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-about-title',
-	'label'    => __( 'About - Main Title', 'simple-business-wp' ),
+	'label'    => __( 'Titre principal', 'simple-business-wp' ),
 	'section'  => 'fp-about',
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => '',
-	'description'   => __( 'This is the big text in the about section. Leave blank to hide.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-about-sub-title',
-	'label'    => __( 'About - Sub Title', 'simple-business-wp' ),
+	'label'    => __( 'Sous-titre', 'simple-business-wp' ),
 	'section'  => 'fp-about',
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => '',
-	'description'   => __( 'This is the smaller text in the about section. Leave blank to hide.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
 	'settings' => 'fp-about-description',
-	'label'    => __( 'About - Description', 'simple-business-wp' ),
+	'label'    => __( 'Description', 'simple-business-wp' ),
 	'section'  => 'fp-about',
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => '',
-	'description'   => __( 'This is the smallest text in the about section. Leave blank to hide.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
@@ -489,7 +486,6 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => '',
-	'description'   => __( 'This is the smallest text in the about section. Leave blank to hide.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
@@ -508,7 +504,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => 'fa-bomb',
-	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
+	'description'   => __( 'Entrer une classe fontawesome.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
@@ -518,7 +514,6 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => '',
-	'description'   => __( 'This is the smallest text in the about section. Leave blank to hide.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
@@ -537,7 +532,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => 'fa-bomb',
-	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
+	'description'   => __( 'Entrer une classe fontawesome.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
@@ -547,7 +542,6 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => '',
-	'description'   => __( 'This is the smallest text in the about section. Leave blank to hide.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
@@ -566,7 +560,7 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => 'fa-bomb',
-	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
+	'description'   => __( 'Entrer une classe fontawesome.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
@@ -576,7 +570,6 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => '',
-	'description'   => __( 'This is the smallest text in the about section. Leave blank to hide.', 'simple-business-wp' ),
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
@@ -595,7 +588,43 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'type'     => 'text',
 	'priority'    => 5,
 	'default'  => 'fa-bomb',
-	'description'   => __( 'Enter a fontawesome font class.', 'simple-business-wp' ),
+	'description'   => __( 'Entrer une classe fontawesome.', 'simple-business-wp' ),
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-frame-title-1',
+	'label'    => __( 'Encadré - Premier titre', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => '',
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-frame-text-1',
+	'label'    => __( 'Encadré - Premier texte', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'textarea',
+	'priority'    => 5,
+	'default'  => '',
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-frame-title-2',
+	'label'    => __( 'Encadré - Second titre', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => '',
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-about-frame-text-2',
+	'label'    => __( 'Encadré - Second texte', 'simple-business-wp' ),
+	'section'  => 'fp-about',
+	'type'     => 'textarea',
+	'priority'    => 5,
+	'default'  => '',
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(

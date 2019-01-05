@@ -13,19 +13,49 @@
                         <p class="about-desc"><?php echo esc_html(simple_business_wp_get_option('fp-about-description')); ?></p>
                     <?php } ?>
                     <div class="row frontpage-about-row" data-sr="enter left and move 50px after 1s">
-                        <div class="col-sm-6">
-                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-1'))?>1</i><h4><?php echo simple_business_wp_get_option('fp-about-title-1')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-1')?></p>
+                        <div class="col-sm-6 frontpage-about-item">
+                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-1'))?></i>
+                            <div class="frontpage-about-column">
+                                <h4><?php echo simple_business_wp_get_option('fp-about-title-1')?></h4>
+                                <p><?php echo simple_business_wp_get_option('fp-about-text-1')?></p>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-2'))?>2</i><h4><?php echo simple_business_wp_get_option('fp-about-title-2')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-2')?></p>
+                        <div class="col-sm-6 frontpage-about-item">
+                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-2'))?></i>
+                            <div class="frontpage-about-column">
+                                <h4><?php echo simple_business_wp_get_option('fp-about-title-2')?></h4>
+                                <p><?php echo simple_business_wp_get_option('fp-about-text-2')?></p>
+                            </div>
                         </div>
                     </div>
                     <div class="row frontpage-about-row"  data-sr="enter left and move 50px after 1s">
-                        <div class="col-sm-6">
-                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-3'))?>3</i><h4><?php echo simple_business_wp_get_option('fp-about-title-3')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-3')?></p>
+                        <div class="col-sm-6 frontpage-about-item">
+                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-3'))?></i>
+                            <div class="frontpage-about-column">
+                                <h4><?php echo simple_business_wp_get_option('fp-about-title-3')?></h4>
+                                <p><?php echo simple_business_wp_get_option('fp-about-text-3')?></p>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-4'))?>4</i><h4><?php echo simple_business_wp_get_option('fp-about-title-4')?></h4><p><?php echo simple_business_wp_get_option('fp-about-text-4')?></p>
+                        <div class="col-sm-6 frontpage-about-item">
+                            <i class="frontpage-about-icon"><?php echo esc_html(simple_business_wp_get_option('fp-about-icon-4'))?></i>
+                            <div class="frontpage-about-column">
+                                <h4><?php echo simple_business_wp_get_option('fp-about-title-4')?></h4>
+                                <p><?php echo simple_business_wp_get_option('fp-about-text-4')?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 frontpage-about-second">
+                    <div class="frontpage-about-frame">
+                        <div class="frontpage-about-frame">
+                            <div class="frontpage-about-frameColumn">
+                                <h4 class="frontpage-about-frameTitle"><?php echo simple_business_wp_get_option('fp-about-frame-title-1')?></h4>
+                                <p class="frontpage-about-frameText"><?php echo simple_business_wp_get_option('fp-about-frame-text-1')?></p>
+                            </div>
+                            <div class="frontpage-about-frameColumn">
+                                <h4 class="frontpage-about-frameTitle"><?php echo simple_business_wp_get_option('fp-about-frame-title-2')?></h4>
+                                <p class="frontpage-about-frameText"><?php echo simple_business_wp_get_option('fp-about-frame-text-2')?></p>
+                            </div>
                         </div>
                     </div>
                 </div>
