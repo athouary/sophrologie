@@ -25,7 +25,7 @@ if (is_front_page()) {
                     $icon = simple_business_wp_get_option( $key . '_icon');
                     $text = simple_business_wp_get_option( $key . '_text');
                     ?>
-                    <div id="<?php echo $key; ?>" class="col-sm-12 col-centered featured frontpage_featured_item" data-sr="wait 0.5s and then ease-in-out 100px">
+                    <div id="<?php echo $key; ?>" class="col-sm-12 col-centered featured frontpage_featured_item <?php echo $key; ?>" data-sr="wait 0.5s and then ease-in-out 100px">
                         <?php
                         if (!empty($featured)) {
                             ?>

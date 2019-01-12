@@ -62,6 +62,17 @@
             </div>
         </div>
     </section>
+    <section class="frontpage-action3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="action3-background"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 <?php } else if (simple_business_wp_get_option('contact-toggle') == '3') {
     // Don't do anything
 } else { ?>
