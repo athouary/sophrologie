@@ -102,12 +102,12 @@
                              <form class="contact-form" name="contact-form" method="post">
                                 <div class="row">
                                     <div class="col-sm-4">
-                                        <div class="form-group"><input data-sr="wait 0.3s, enter left and move 50px after 1s" type="text" id="myname" name="myname" placeholder="Name*" class="form-control input-lg" /></div>
-                                        <div class="form-group"><input data-sr="wait 0.3s, enter left and move 50px after 1s" type="text" id="email" name="email" placeholder="Email*" class="form-control input-lg" /></div>
-                                        <div class="form-group"><input data-sr="wait 0.3s, enter left and move 50px after 1s" type="text" id="website" name="website" placeholder="Website" class="form-control input-lg" /></div>
+                                        <div class="form-group"><input data-sr="wait 0.3s, enter left and move 30px after 1s" type="text" id="myname" name="myname" placeholder="Name*" class="form-control input-lg" /></div>
+                                        <div class="form-group"><input data-sr="wait 0.3s, enter left and move 30px after 1s" type="text" id="email" name="email" placeholder="Email*" class="form-control input-lg" /></div>
+                                        <div class="form-group"><input data-sr="wait 0.3s, enter left and move 30px after 1s" type="text" id="website" name="website" placeholder="Website" class="form-control input-lg" /></div>
                                     </div>
                                     <div class="col-sm-8">
-                                        <textarea data-sr="wait 0.3s, enter right and move 50px after 1s" id="comments" name="comments" class="form-control input-lg" rows="6" cols="" placeholder="Comments"></textarea>
+                                        <textarea data-sr="wait 0.3s, enter right and move 30px after 1s" id="comments" name="comments" class="form-control input-lg" rows="6" cols="" placeholder="Comments"></textarea>
                                     </div>
                                 </div>
                                 <br />

@@ -3,7 +3,7 @@
         <div>
             <img id="frontpage_banner" class="static_banner nimbus_1168_526" src="<?php echo esc_url(simple_business_wp_get_option('simple_business_wp_content_width_banner')); ?>" />
             <div class="frontpage_banner_text_wrapper">
-                
+
             </div>
         </div>
     <?php } else if (simple_business_wp_get_option('fp-banner-toggle') == "3") { ?>
