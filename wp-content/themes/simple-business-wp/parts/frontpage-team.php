@@ -23,6 +23,9 @@
                             <img class="img-responsive img-circle center-block" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/01/Nath2-1-e1546696447730-300x300.jpg" />
                             <h4 class="team-item-title"><?php echo simple_business_wp_get_option('fp-team-name'); ?></h4>
                             <h5 class="team-item-sub-title"><?php echo simple_business_wp_get_option('fp-team-job'); ?></h5>
+                            <div class="text-center team-button">
+                                <a target="_blank" href="https://sophrologie.thouary.com/wp-content/uploads/2019/01/certfification.pdf" type="button" class="btn btn-primary text-center">Voir la certification</a>
+                            </div>
                         </div>
                     </div>
                 </div>

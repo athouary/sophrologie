@@ -222,14 +222,14 @@ Kirki::add_field( 'simple-business-wp-config', array(
 
 // Action 1
 
-//Kirki::add_section( 'fp-action1', array(
-//    'title'          => __( 'Premier bouton, 'simple-business-wp' ),
-//    'description'    => '',
-//    'panel'          => '',
-//    'priority'    => 5,
-//    'capability'     => 'edit_theme_options',
-//    'theme_supports' => '',
-//) );
+Kirki::add_section( 'fp-action1', array(
+    'title'          => __( 'Introduction', 'simple-business-wp' ),
+    'description'    => '',
+    'panel'          => '',
+    'priority'    => 5,
+    'capability'     => 'edit_theme_options',
+    'theme_supports' => '',
+) );
 
 //Kirki::add_field( 'simple-business-wp-config', array(
 //	'type'        => 'radio-buttonset',
@@ -245,14 +245,32 @@ Kirki::add_field( 'simple-business-wp-config', array(
 //	),
 //) );
 
-//Kirki::add_field( 'action_text_content', array(
-//	'type'     => 'textarea',
-//	'settings' => 'fp-test-description',
-//	'label'    => __( 'Action Text Section Content', 'simple-business-wp' ),
-//	'section'     => 'fp-action1',
-//	'default'  => 'Default',
-//	'priority'    => 5,
-//) );
+Kirki::add_field( 'simple-business-wp-config', array(
+	'type'     => 'textarea',
+	'settings' => 'fp-action1-text1',
+	'label'    => __( 'Texte 1', 'simple-business-wp' ),
+	'section'     => 'fp-action1',
+	'default'  => 'Default',
+	'priority'    => 5,
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'type'     => 'textarea',
+	'settings' => 'fp-action1-text2',
+	'label'    => __( 'Texte 2', 'simple-business-wp' ),
+	'section'     => 'fp-action1',
+	'default'  => 'Default',
+	'priority'    => 5,
+) );
+
+Kirki::add_field( 'simple-business-wp-config', array(
+	'type'     => 'textarea',
+	'settings' => 'fp-action1-text3',
+	'label'    => __( 'Texte 3', 'simple-business-wp' ),
+	'section'     => 'fp-action1',
+	'default'  => 'Default',
+	'priority'    => 5,
+) );
 
 
 //Kirki::add_field( 'simple-business-wp-config', array(
