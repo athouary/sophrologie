@@ -220,10 +220,10 @@ Kirki::add_field( 'simple-business-wp-config', array(
 	'priority'    => 5,
 ) );
 
-// Action 1
+// Action1
 
-Kirki::add_section( 'fp-action1', array(
-    'title'          => __( 'Introduction', 'simple-business-wp' ),
+Kirki::add_section( 'fp-action', array(
+    'title'          => __( 'Zone du bouton', 'simple-business-wp' ),
     'description'    => '',
     'panel'          => '',
     'priority'    => 5,
@@ -231,47 +231,42 @@ Kirki::add_section( 'fp-action1', array(
     'theme_supports' => '',
 ) );
 
-//Kirki::add_field( 'simple-business-wp-config', array(
-//	'type'        => 'radio-buttonset',
-//	'settings'    => 'action-toggle',
-//	'label'       => __( 'Frontpage Action Row Status', 'simple-business-wp' ),
-//	'section'     => 'fp-action1',
-//	'default'     => '2',
-//	'priority'    => 5,
-//	'choices'     => array(
-//		'1'   => esc_attr__( 'Show', 'simple-business-wp' ),
-//		'2' => esc_attr__( 'Demo', 'simple-business-wp' ),
-//		'3'  => esc_attr__( 'Hide', 'simple-business-wp' ),
-//	),
-//) );
-
 Kirki::add_field( 'simple-business-wp-config', array(
-	'type'     => 'textarea',
-	'settings' => 'fp-action1-text1',
-	'label'    => __( 'Texte 1', 'simple-business-wp' ),
-	'section'     => 'fp-action1',
-	'default'  => 'Default',
+	'settings' => 'fp-action-title',
+	'label'    => __( 'Titre', 'simple-business-wp' ),
+	'section'  => 'fp-action',
+	'type'     => 'text',
 	'priority'    => 5,
+	'default'  => '',
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'type'     => 'textarea',
-	'settings' => 'fp-action1-text2',
-	'label'    => __( 'Texte 2', 'simple-business-wp' ),
-	'section'     => 'fp-action1',
-	'default'  => 'Default',
+	'settings' => 'fp-action-button-text',
+	'label'    => __( 'Texte du bouton', 'simple-business-wp' ),
+	'section'  => 'fp-action',
+	'type'     => 'text',
 	'priority'    => 5,
+	'default'  => '',
 ) );
 
 Kirki::add_field( 'simple-business-wp-config', array(
-	'type'     => 'textarea',
-	'settings' => 'fp-action1-text3',
-	'label'    => __( 'Texte 3', 'simple-business-wp' ),
-	'section'     => 'fp-action1',
-	'default'  => 'Default',
+	'settings' => 'fp-action-button-url',
+	'label'    => __( 'Lien du bouton', 'simple-business-wp' ),
+	'section'  => 'fp-action',
+	'type'     => 'text',
 	'priority'    => 5,
+	'default'  => '',
+	'sanitize_callback' => 'simple_business_wp_sanitize_url'
 ) );
 
+Kirki::add_field( 'simple-business-wp-config', array(
+	'settings' => 'fp-action-slug',
+	'label'    => __( 'Identifiant pour URL', 'simple-business-wp' ),
+	'section'  => 'fp-action',
+	'type'     => 'text',
+	'priority'    => 5,
+	'default'  => 'action',
+) );
 
 //Kirki::add_field( 'simple-business-wp-config', array(
 //	'settings' => 'fp-action-slug',

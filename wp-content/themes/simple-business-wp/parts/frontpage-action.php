@@ -34,8 +34,10 @@ if (simple_business_wp_get_option('action-toggle') == "1") {
                     </div>
                 </div>
                 <div class="text-center action-button">
-                    <div class="action-background"><br></div>
-                    <a href="#rendez-vous" type="button" class="btn btn-primary text-center">Prendre rendez-vous</a>
+                    <div class="action-background"></div>
+                    <a href="<?php echo esc_url(simple_business_wp_get_option('fp-action-button-url')); ?>" type="button" class="btn btn-primary text-center">
+                        <?php echo esc_html(simple_business_wp_get_option('fp-action-button-text')); ?>
+                    </a>
                 </div>
             </div>
         </div>
