@@ -1,7 +1,7 @@
 
     <?php if (simple_business_wp_get_option('fp-banner-toggle') == "1") { ?>
         <div class="frontpage-banner-section">
-            <img id="frontpage_banner" class="static_banner nimbus_1168_526" src="<?php echo esc_url(simple_business_wp_get_option('simple_business_wp_content_width_banner')); ?>" />
+            <img id="frontpage_banner" class="static_banner nimbus_1168_526" src="<?php echo esc_url(simple_business_wp_get_option('simple_business_wp_content_width_banner')); ?>" alt="Nathalie Thouary Solon Sophrologue Hauts-de-Seine" />
             <div class="frontpage-banner-filter">
                 <img class="frontpage-banner-logo" src="<?php echo get_home_url(); ?>/wp-content/uploads/2019/01/logo-png.png" alt="logo Nathalie Thouary Solon Sophrologie" />
             </div>
