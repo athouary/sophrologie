@@ -62,7 +62,7 @@
                     <p class="contact-info col-md-offset-2"><a href="mailto:nsolon@thouary.com">nsolon@thouary.com</a></p>
                     <p class="contact-info col-md-offset-2"><a href="tel:+33769502282">07 69 50 22 82</a></p>
                     <p class="contact-info col-md-offset-2">Adresse du cabinet :</p>
-                    <p class="contact-info col-md-offset-2">44 rue de la Sablière - 92600 Asnières-sur-Seine</p>
+                    <p class="contact-info col-md-offset-2">24 rue du Puits Grenet - 95230 Soisy-sous-Montmorency</p>
                 </div>
             </div>
         </div>
